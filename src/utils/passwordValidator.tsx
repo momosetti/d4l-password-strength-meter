@@ -1,6 +1,6 @@
-import { PasswordValidation } from "../types/utilsTypes";
+import { isValidPasswordType } from "../types/utilsTypes";
 
-export default function passwordValidator(value: string): PasswordValidation {
+export default function isValidPassword(value: string): isValidPasswordType {
   const hasAtLeast8Characters = new RegExp(/^.{8,}/);
   const hasAtLeastCapitalLetter = new RegExp(/\w*[A-Z]\w*/);
   const hasAtLeastLowerCase = new RegExp(/\w*[a-z]\w*/);
