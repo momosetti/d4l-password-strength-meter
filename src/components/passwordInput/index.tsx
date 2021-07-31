@@ -1,33 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import useDebounce from "../../hooks/useDebounce";
+import isValidPassword from "../../utils/passwordValidator";
 import PasswordStrengthLogger from "../passwordStrengthLogger";
-
-const FormControlWrapper = styled.div`
-  display: inline-block;
-  margin: 0.7em 0;
-  label {
-    display: block;
-  }
-`;
-
-const Input = styled.input`
-  border: 1px solid var(--white-grey);
-  padding: 0.7em 1em;
-  border-radius: 10px;
-`;
-
-const PasswordVisiblityToggle = styled.button`
-  font-size: 1em;
-  padding: 0.3em;
-  border: none;
-  background-color: transparent;
-  margin: 0 0.7em;
-  cursor: pointer;
-`;
 
 const PasswordInput: React.FunctionComponent = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const [passwordValue, setPasswordValue] = useState("");
+  const debouncedPassword = useDebounce<string>(passwordValue, 500);
 
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
@@ -63,8 +43,33 @@ const PasswordInput: React.FunctionComponent = () => {
           </PasswordVisiblityToggle>
         </FormControlWrapper>
       </div>
-      <PasswordStrengthLogger />
+      <PasswordStrengthLogger
+        passwordStrengthStatus={isValidPassword(debouncedPassword)}
+      />
     </>
   );
 };
 export default PasswordInput;
+
+const FormControlWrapper = styled.div`
+  display: inline-block;
+  margin: 0.7em 0;
+  label {
+    display: block;
+  }
+`;
+
+const Input = styled.input`
+  border: 1px solid var(--white-grey);
+  padding: 0.7em 1em;
+  border-radius: 10px;
+`;
+
+const PasswordVisiblityToggle = styled.button`
+  font-size: 1em;
+  padding: 0.3em;
+  border: none;
+  background-color: transparent;
+  margin: 0 0.7em;
+  cursor: pointer;
+`;
