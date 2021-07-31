@@ -1,5 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { SectionWrapperProps } from "./types";
+
+const SectionWrapper: React.FunctionComponent<SectionWrapperProps> = ({
+  children,
+}: SectionWrapperProps) => {
+  return <Section>{children}</Section>;
+};
+export default SectionWrapper;
 
 const Section = styled.section`
   padding: 1em;
@@ -15,8 +23,3 @@ const Section = styled.section`
     font-weight: 600;
   }
 `;
-
-const SectionWrapper: React.FunctionComponent = ({ children }) => {
-  return <Section>{children}</Section>;
-};
-export default SectionWrapper;
