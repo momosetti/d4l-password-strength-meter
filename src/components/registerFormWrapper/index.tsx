@@ -12,17 +12,23 @@ const SubmitButtom = styled.button`
   cursor: pointer;
   font-weight: bold;
 `;
-const RegisterFormWrapper: React.FunctionComponent = ({ children }) => {
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault();
-  };
-  return (
-    <form id="register-form">
-      {children}
-      <SubmitButtom onClick={handleSubmit} type="submit">
-        register now
-      </SubmitButtom>
-    </form>
-  );
+type RegisterFormWrapperProps = {
+  children: React.ReactNode;
 };
+const RegisterFormWrapper: React.FunctionComponent<RegisterFormWrapperProps> =
+  ({ children }: RegisterFormWrapperProps) => {
+    const handleSubmit = (
+      e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
+      e.preventDefault();
+    };
+    return (
+      <form id="register-form">
+        {children}
+        <SubmitButtom onClick={handleSubmit} type="submit">
+          register now
+        </SubmitButtom>
+      </form>
+    );
+  };
 export default RegisterFormWrapper;
