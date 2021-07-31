@@ -1,5 +1,39 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components";
+import { isValidPasswordType } from "../../types/utilsTypes";
+
+type PasswordStrengthLoggerProps = {
+  passwordStrengthStatus: isValidPasswordType;
+};
+const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
+  ({ passwordStrengthStatus }: PasswordStrengthLoggerProps) => {
+    console.log(passwordStrengthStatus);
+    return (
+      <PasswordStrengthWrapper>
+        <p>Make sure your password contains at least</p>
+        <ul>
+          <li>
+            <i className="ri-error-warning-fill"></i> a capital letter,
+          </li>
+          <li>
+            <i className="ri-check-double-fill"></i> a lowercase letter,
+          </li>
+          <li>
+            <i className="ri-check-double-fill"></i>a special character{" "}
+            <span>and</span>
+          </li>
+          <li>
+            <i className="ri-check-double-fill"></i> contain a number
+          </li>
+          <li>
+            <i className="ri-check-double-fill"></i> <span>and it</span> must be
+            at least 8 characters long.
+          </li>
+        </ul>
+      </PasswordStrengthWrapper>
+    );
+  };
+export default PasswordStrengthLogger;
 
 const PasswordStrengthWrapper = styled.div`
   display: block;
@@ -12,30 +46,3 @@ const PasswordStrengthWrapper = styled.div`
     }
   }
 `;
-const PasswordStrengthLogger: React.FunctionComponent = () => {
-  return (
-    <PasswordStrengthWrapper>
-      <p>Make sure your password contains at least</p>
-      <ul>
-        <li>
-          <i className="ri-error-warning-fill"></i> a capital letter,
-        </li>
-        <li>
-          <i className="ri-check-double-fill"></i> a lowercase letter,
-        </li>
-        <li>
-          <i className="ri-check-double-fill"></i>a special character{" "}
-          <span>and</span>
-        </li>
-        <li>
-          <i className="ri-check-double-fill"></i> contain a number
-        </li>
-        <li>
-          <i className="ri-check-double-fill"></i> <span>and it</span> must be
-          at least 8 characters long.
-        </li>
-      </ul>
-    </PasswordStrengthWrapper>
-  );
-};
-export default PasswordStrengthLogger;
