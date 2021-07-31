@@ -1,6 +1,7 @@
 import React from "react";
 import EmailInput from "./components/emailInput";
 import SectionWrapper from "./components/layout/sectionWrapper";
+import PasswordInput from "./components/passwordInput";
 import RegisterFormWrapper from "./components/registerFormWrapper";
 
 const App: React.FunctionComponent = () => {
@@ -10,6 +11,7 @@ const App: React.FunctionComponent = () => {
       <p>Create your personal account</p>
       <RegisterFormWrapper>
         <EmailInput />
+        <PasswordInput />
       </RegisterFormWrapper>
     </SectionWrapper>
   );
