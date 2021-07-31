@@ -4,10 +4,12 @@ import styled from "styled-components";
 const FormControlWrapper = styled.div`
   display: inline-block;
   margin: 0.7em 0;
+  label {
+    display: block;
+  }
 `;
 
 const Input = styled.input`
-  width: 100%;
   border: 1px solid var(--white-grey);
   padding: 0.7em 1em;
   border-radius: 10px;
