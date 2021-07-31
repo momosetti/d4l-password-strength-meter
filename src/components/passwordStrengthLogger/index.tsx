@@ -1,11 +1,8 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import { isValidPasswordType } from "../../types/utilsTypes";
 import PasswordStrengthConstraint from "./passwordStrengthContraint";
+import { PasswordStrengthLoggerProps } from "./types";
 
-type PasswordStrengthLoggerProps = {
-  passwordStrengthStatus: isValidPasswordType;
-};
 const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
   ({ passwordStrengthStatus }: PasswordStrengthLoggerProps) => {
     const { hasLong, capitalLetter, hasLowercase, containNumber, specialChar } =
