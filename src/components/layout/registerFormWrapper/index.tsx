@@ -1,20 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { RegisterFormWrapperProps } from "./types";
 
-const SubmitButtom = styled.button`
-  display: block;
-  color: #fff;
-  background-color: var(--primary);
-  border: none;
-  padding: 1em;
-  text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-`;
-type RegisterFormWrapperProps = {
-  children: React.ReactNode;
-};
 const RegisterFormWrapper: React.FunctionComponent<RegisterFormWrapperProps> =
   ({ children }: RegisterFormWrapperProps) => {
     const handleSubmit = (
@@ -32,3 +19,15 @@ const RegisterFormWrapper: React.FunctionComponent<RegisterFormWrapperProps> =
     );
   };
 export default RegisterFormWrapper;
+
+const SubmitButtom = styled.button`
+  display: block;
+  color: #fff;
+  background-color: var(--primary);
+  border: none;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+`;

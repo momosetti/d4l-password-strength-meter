@@ -2,7 +2,7 @@ import React from "react";
 import EmailInput from "./components/emailInput";
 import SectionWrapper from "./components/layout/sectionWrapper";
 import PasswordInput from "./components/passwordInput";
-import RegisterFormWrapper from "./components/registerFormWrapper";
+import RegisterFormWrapper from "./components/layout/registerFormWrapper";
 
 const App: React.FunctionComponent = () => {
   return (
