@@ -32,7 +32,7 @@ const PasswordInput: React.FunctionComponent = () => {
             onChange={handlePasswordChange}
           />
           <PasswordVisiblityToggle
-            aria-label="show/hide password"
+            aria-label="show or hide password"
             onClick={togglePasswordVisbility}
           >
             {passwordVisibility ? (
