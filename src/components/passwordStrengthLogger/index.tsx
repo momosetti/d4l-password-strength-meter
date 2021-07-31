@@ -1,34 +1,40 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import { isValidPasswordType } from "../../types/utilsTypes";
+import PasswordStrengthConstraint from "./passwordStrengthContraint";
 
 type PasswordStrengthLoggerProps = {
   passwordStrengthStatus: isValidPasswordType;
 };
 const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
   ({ passwordStrengthStatus }: PasswordStrengthLoggerProps) => {
+    const { hasLong, capitalLetter, hasLowercase, containNumber, specialChar } =
+      passwordStrengthStatus;
     console.log(passwordStrengthStatus);
     return (
       <PasswordStrengthWrapper>
         <p>Make sure your password contains at least</p>
         <ul>
-          <li>
-            <i className="ri-error-warning-fill"></i> a capital letter,
-          </li>
-          <li>
-            <i className="ri-check-double-fill"></i> a lowercase letter,
-          </li>
-          <li>
-            <i className="ri-check-double-fill"></i>a special character{" "}
-            <span>and</span>
-          </li>
-          <li>
-            <i className="ri-check-double-fill"></i> contain a number
-          </li>
-          <li>
-            <i className="ri-check-double-fill"></i> <span>and it</span> must be
-            at least 8 characters long.
-          </li>
+          <PasswordStrengthConstraint
+            status={capitalLetter}
+            innerContent="a capital letter,"
+          />
+          <PasswordStrengthConstraint
+            status={hasLowercase}
+            innerContent="a lowercase letter,"
+          />
+          <PasswordStrengthConstraint
+            status={specialChar}
+            innerContent="a special character, <span>and</span>"
+          />
+          <PasswordStrengthConstraint
+            status={containNumber}
+            innerContent="contain a number"
+          />
+          <PasswordStrengthConstraint
+            status={hasLong}
+            innerContent="<span>and it </span> must be at least 8 characters long."
+          />
         </ul>
       </PasswordStrengthWrapper>
     );
@@ -38,11 +44,12 @@ export default PasswordStrengthLogger;
 const PasswordStrengthWrapper = styled.div`
   display: block;
   margin: 0.7em 0;
+  ul {
+    list-style: none;
+  }
   li {
-    display: flex;
-    i {
-      align-self: center;
-      margin-right: 0.2em;
+    span {
+      color: #000;
     }
   }
 `;
