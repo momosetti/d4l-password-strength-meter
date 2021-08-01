@@ -22,7 +22,7 @@ export default RegisterFormWrapper;
 
 const SubmitButtom = styled.button`
   display: block;
-  color: #fff;
+  color: #000;
   background-color: var(--primary);
   border: none;
   padding: 1em;
