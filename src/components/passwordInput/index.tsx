@@ -28,6 +28,7 @@ const PasswordInput: React.FunctionComponent = () => {
             type={passwordVisibility ? "text" : "password"}
             id="password"
             aria-label="password input"
+            aria-invalid={isValidPassword(debouncedPassword).isValid}
             value={passwordValue}
             onChange={handlePasswordChange}
           />
