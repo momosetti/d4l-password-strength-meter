@@ -10,7 +10,8 @@ const SectionWrapper: React.FunctionComponent<SectionWrapperProps> = ({
 export default SectionWrapper;
 
 const Section = styled.section`
-  padding: 1em;
+  width: 50%;
+  padding: 2em;
   margin: 1em;
   border: 1px solid var(--white-grey);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
