@@ -5,11 +5,16 @@ import { PasswordStrengthLoggerProps } from "./types";
 
 const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
   ({ passwordStrengthStatus }: PasswordStrengthLoggerProps) => {
-    const { hasLong, capitalLetter, hasLowercase, containNumber, specialChar } =
-      passwordStrengthStatus;
-    console.log(passwordStrengthStatus);
+    const {
+      hasLong,
+      capitalLetter,
+      hasLowercase,
+      containNumber,
+      specialChar,
+      isValid,
+    } = passwordStrengthStatus;
     return (
-      <PasswordStrengthWrapper>
+      <PasswordStrengthWrapper role={!isValid ? "alert" : ""}>
         <p>Make sure your password contains at least</p>
         <ul>
           <PasswordStrengthConstraint
