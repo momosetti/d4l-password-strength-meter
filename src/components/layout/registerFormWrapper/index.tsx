@@ -11,7 +11,11 @@ const RegisterFormWrapper: React.FunctionComponent<RegisterFormWrapperProps> =
     };
     return (
       <form id="register-form">
-        {children}
+        <RegiserFormChildrenWrapper>{children}</RegiserFormChildrenWrapper>
+        <label htmlFor="term of service">
+          <input type="checkbox" name="term of service" id="term of service" />{" "}
+          I agree to the term of service
+        </label>
         <SubmitButtom onClick={handleSubmit} type="submit">
           register now
         </SubmitButtom>
@@ -30,4 +34,8 @@ const SubmitButtom = styled.button`
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  margin: 0.7em 0;
+`;
+const RegiserFormChildrenWrapper = styled.div`
+  margin-bottom: 3em;
 `;
