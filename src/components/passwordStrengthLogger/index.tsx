@@ -15,6 +15,7 @@ const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
     } = passwordStrengthStatus;
     return (
       <PasswordStrengthWrapper
+        tabIndex={!isValid ? 0 : undefined}
         role={!isValid ? "alert" : ""}
         aria-hidden={isValid}
       >
@@ -46,7 +47,7 @@ const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
   };
 export default PasswordStrengthLogger;
 
-const PasswordStrengthWrapper = styled.div`
+const PasswordStrengthWrapper = styled.div<{ tabIndex: number | undefined }>`
   display: block;
   margin: 0.7em 0;
   ul {
