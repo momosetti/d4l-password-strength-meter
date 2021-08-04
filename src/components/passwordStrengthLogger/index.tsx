@@ -14,7 +14,10 @@ const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
       isValid,
     } = passwordStrengthStatus;
     return (
-      <PasswordStrengthWrapper role={!isValid ? "alert" : ""}>
+      <PasswordStrengthWrapper
+        role={!isValid ? "alert" : ""}
+        aria-hidden={isValid}
+      >
         <p>Make sure your password contains at least</p>
         <ul>
           <PasswordStrengthConstraint
