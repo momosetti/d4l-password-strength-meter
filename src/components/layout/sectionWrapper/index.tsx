@@ -9,7 +9,7 @@ const SectionWrapper: React.FunctionComponent<SectionWrapperProps> = ({
 };
 export default SectionWrapper;
 
-const Section = styled.section`
+const Section = styled.main`
   width: 50%;
   padding: 2em;
   margin: 1em;
