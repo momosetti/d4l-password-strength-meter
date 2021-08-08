@@ -9,7 +9,7 @@ describe("test the main App", () => {
     expect(screen.getByText("Register")).toBeInTheDocument();
   });
 
-  test("check if there's any accessiblity violations", async () => {
+  test("should not have any accessiblity violations", async () => {
     expect.extend(toHaveNoViolations);
 
     const { container } = render(<App />);
