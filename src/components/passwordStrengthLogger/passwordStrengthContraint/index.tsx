@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-type PasswordStrengthConstraintType = {
-  status: boolean;
-  innerContent: string;
-};
+import { PasswordStrengthConstraintType } from "./types";
+
 export default function PasswordStrengthConstraint({
   status = false,
   innerContent,
@@ -11,7 +9,7 @@ export default function PasswordStrengthConstraint({
   const icon = `ri-${status ? "check-double" : "error-warning"}-fill`;
   return (
     <PasswordStrengthConstraintLi status={status} aria-hidden={status}>
-      <i className={icon}></i>
+      <i title="icon" className={icon}></i>
       <p dangerouslySetInnerHTML={{ __html: innerContent }} />
     </PasswordStrengthConstraintLi>
   );
