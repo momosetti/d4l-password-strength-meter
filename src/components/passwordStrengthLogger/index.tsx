@@ -16,7 +16,7 @@ const PasswordStrengthLogger: FunctionComponent<PasswordStrengthLoggerProps> =
     return (
       <PasswordStrengthWrapper
         tabIndex={!isValid ? 0 : undefined}
-        role={!isValid ? "alert" : ""}
+        role={!isValid ? "alert" : undefined}
         aria-hidden={isValid}
       >
         <p>Make sure your password contains at least</p>
