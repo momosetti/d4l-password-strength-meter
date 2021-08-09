@@ -81,6 +81,6 @@ Or `yarn test:w` to run test suites in watch mode.
 
 - Testing:
 
-- Test runner: Jest
+  - Test runner: Jest
 
-- React Testing library: [react-testing-library](https://testing-library.com/)
+  - React Testing library: [react-testing-library](https://testing-library.com/)
