@@ -3,36 +3,9 @@
      📦d4l-password-strength-meter
      ┣ 📂src
      ┃ ┣ 📂components
-     ┃ ┃ ┣ 📂emailInput
-     ┃ ┃ ┃ ┗ 📜index.tsx
-     ┃ ┃ ┣ 📂layout
-     ┃ ┃ ┃ ┣ 📂registerFormWrapper
-     ┃ ┃ ┃ ┃ ┣ 📜index.tsx
-     ┃ ┃ ┃ ┃ ┗ 📜types.tsx
-     ┃ ┃ ┃ ┗ 📂sectionWrapper
-     ┃ ┃ ┃ ┃ ┣ 📜index.tsx
-     ┃ ┃ ┃ ┃ ┗ 📜types.tsx
-     ┃ ┃ ┣ 📂passwordInput
-     ┃ ┃ ┃ ┣ 📜index.tsx
-     ┃ ┃ ┃ ┗ 📜passwwordInput.test.tsx
-     ┃ ┃ ┗ 📂passwordStrengthLogger
-     ┃ ┃ ┃ ┣ 📂passwordStrengthContraint
-     ┃ ┃ ┃ ┃ ┣ 📂__snapshots__
-     ┃ ┃ ┃ ┃ ┃ ┗ 📜passwordStrengthConstraint.test.tsx.snap
-     ┃ ┃ ┃ ┃ ┣ 📜index.tsx
-     ┃ ┃ ┃ ┃ ┣ 📜passwordStrengthConstraint.test.tsx
-     ┃ ┃ ┃ ┃ ┗ 📜types.ts
-     ┃ ┃ ┃ ┣ 📜index.tsx
-     ┃ ┃ ┃ ┣ 📜passwordStregthLogger.test.tsx
-     ┃ ┃ ┃ ┗ 📜types.tsx
      ┃ ┣ 📂hooks
-     ┃ ┃ ┣ 📜useDebounce.test.ts
-     ┃ ┃ ┗ 📜useDebounce.tsx
      ┃ ┣ 📂types
-     ┃ ┃ ┗ 📜utilsTypes.tsx
      ┃ ┣ 📂utils
-     ┃ ┃ ┣ 📜passwordValidator.test.ts
-     ┃ ┃ ┗ 📜passwordValidator.tsx
      ┃ ┣ 📜App.test.tsx
      ┃ ┣ 📜App.tsx
      ┃ ┣ 📜globalStyle.tsx
