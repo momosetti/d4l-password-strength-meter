@@ -25,7 +25,7 @@
 
 ## How to run the app:
 
-After clonging the repo. Using your prefred package manger (I used `Yarn`).
+After cloning the repo. Using your preferred package manger (I use `Yarn`).
 
 To install dependencies;
 
@@ -61,7 +61,7 @@ Or `yarn test:w` to run test suites in watch mode.
 
 - Source control version: GIT
 
-- Linting & Formating: Eslint and Prettier (local Vscode configuration).
+- Linting & Formatting: Eslint and Prettier (local Vscode configuration).
 
 - Testing:
 
