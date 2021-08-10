@@ -1,3 +1,5 @@
+> [Live Demo](d4l-psm.netlify.app)
+
 ## Project structure:
 
      📦d4l-password-strength-meter
@@ -27,6 +29,7 @@ After clonging the repo. Using your prefred package manger (I used `Yarn`).
 
 To install dependencies;
 
+    git clone https://github.com/momosetti/d4l-password-strength-meter/ <cloned_directory>
     cd <cloned_directory>
     yarn install
 
@@ -50,7 +53,7 @@ Or `yarn test:w` to run test suites in watch mode.
 
 - Source control version: GIT
 
-- Linting & Formating: Eslint.
+- Linting & Formating: Eslint and Prettier (local Vscode configuration).
 
 - Testing:
 
