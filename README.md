@@ -1,4 +1,4 @@
-> [Live Demo](d4l-psm.netlify.app)
+> [Live Demo](https://d4l-psm.netlify.app)
 
 ## Project structure:
 
@@ -36,6 +36,14 @@ To install dependencies;
 For starting the dev server:
 
     yarn dev
+
+For building:
+
+    yarn build
+
+For serving static files (after build the project):
+
+    yarn serve
 
 For testing:
 
