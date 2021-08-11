@@ -4,15 +4,11 @@
 
 ```
 d4l-password-strength-meter
-├─ .eslintrc.json
-├─ .gitignore
-├─ index.html
-├─ jest.setup.js
-├─ package.json
-├─ README.md
 ├─ src
 │  ├─ App.test.tsx
 │  ├─ App.tsx
+│  ├─ main.tsx
+│  ├─ globalStyle.tsx
 │  ├─ components
 │  │  ├─ emailInput
 │  │  │  └─ index.tsx
@@ -36,17 +32,21 @@ d4l-password-strength-meter
 │  │     │  └─ __snapshots__
 │  │     │     └─ passwordStrengthConstraint.test.tsx.snap
 │  │     └─ types.tsx
-│  ├─ globalStyle.tsx
 │  ├─ hooks
 │  │  ├─ useDebounce.test.ts
 │  │  └─ useDebounce.tsx
-│  ├─ main.tsx
 │  ├─ types
 │  │  └─ utilsTypes.tsx
 │  ├─ utils
 │  │  ├─ passwordValidator.test.ts
 │  │  └─ passwordValidator.tsx
 │  └─ vite-env.d.ts
+├─ .eslintrc.json
+├─ .gitignore
+├─ index.html
+├─ jest.setup.js
+├─ package.json
+├─ README.md
 ├─ tsconfig.json
 ├─ vite.config.ts
 └─ yarn.lock
