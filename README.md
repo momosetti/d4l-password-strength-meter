@@ -2,26 +2,56 @@
 
 ## Project structure:
 
-     📦d4l-password-strength-meter
-     ┣ 📂src
-     ┃ ┣ 📂components
-     ┃ ┣ 📂hooks
-     ┃ ┣ 📂types
-     ┃ ┣ 📂utils
-     ┃ ┣ 📜App.test.tsx
-     ┃ ┣ 📜App.tsx
-     ┃ ┣ 📜globalStyle.tsx
-     ┃ ┣ 📜main.tsx
-     ┃ ┗ 📜vite-env.d.ts
-     ┣ 📜.eslintrc.json
-     ┣ 📜.gitignore
-     ┣ 📜index.html
-     ┣ 📜jest.setup.js
-     ┣ 📜package.json
-     ┣ 📜README.md
-     ┣ 📜tsconfig.json
-     ┣ 📜vite.config.ts
-     ┗ 📜yarn.lock
+```
+d4l-password-strength-meter
+├─ .eslintrc.json
+├─ .gitignore
+├─ index.html
+├─ jest.setup.js
+├─ package.json
+├─ README.md
+├─ src
+│  ├─ App.test.tsx
+│  ├─ App.tsx
+│  ├─ components
+│  │  ├─ emailInput
+│  │  │  └─ index.tsx
+│  │  ├─ layout
+│  │  │  ├─ registerFormWrapper
+│  │  │  │  ├─ index.tsx
+│  │  │  │  └─ types.tsx
+│  │  │  └─ sectionWrapper
+│  │  │     ├─ index.tsx
+│  │  │     └─ types.tsx
+│  │  ├─ passwordInput
+│  │  │  ├─ index.tsx
+│  │  │  └─ passwordInput.test.tsx
+│  │  └─ passwordStrengthLogger
+│  │     ├─ index.tsx
+│  │     ├─ passwordStrengthLogger.test.tsx
+│  │     ├─ passwordStrengthConstraint
+│  │     │  ├─ index.tsx
+│  │     │  ├─ passwordStrengthConstraint.test.tsx
+│  │     │  ├─ types.ts
+│  │     │  └─ __snapshots__
+│  │     │     └─ passwordStrengthConstraint.test.tsx.snap
+│  │     └─ types.tsx
+│  ├─ globalStyle.tsx
+│  ├─ hooks
+│  │  ├─ useDebounce.test.ts
+│  │  └─ useDebounce.tsx
+│  ├─ main.tsx
+│  ├─ types
+│  │  └─ utilsTypes.tsx
+│  ├─ utils
+│  │  ├─ passwordValidator.test.ts
+│  │  └─ passwordValidator.tsx
+│  └─ vite-env.d.ts
+├─ tsconfig.json
+├─ vite.config.ts
+└─ yarn.lock
+
+```
 
 ## How to run the app:
 
