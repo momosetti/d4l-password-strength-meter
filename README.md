@@ -1,8 +1,10 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/114804fdcf5c45f5befb20d0442a01e2)](https://www.codacy.com/gh/momosetti/d4l-password-strength-meter/dashboard?utm_source=github.com&utm_medium=referral&utm_content=momosetti/d4l-password-strength-meter&utm_campaign=Badge_Grade)
+
 > [Live Demo](https://d4l-psm.netlify.app)
 
-## Project structure:
+## Project structure
 
-```
+```bash
 d4l-password-strength-meter
 ├─ src
 │  ├─ App.test.tsx
@@ -53,11 +55,11 @@ d4l-password-strength-meter
 
 ```
 
-## How to run the app:
+## How to run the app
 
 After cloning the repo. Using your preferred package manger (I use `Yarn`).
 
-To install dependencies;
+To install dependencies:
 
     git clone https://github.com/momosetti/d4l-password-strength-meter/ <cloned_directory>
     cd <cloned_directory>
@@ -81,7 +83,7 @@ For testing:
 
 Or `yarn test:w` to run test suites in watch mode.
 
-## Tech Stack used:
+## Tech Stack used
 
 - SPA library: React.js (TypeScript) .
 
