@@ -11,7 +11,7 @@ before_deploy:
   - yarn build
 deploy:
   provider: script
-  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./dist
+  script: netlify deploy --dir=dist --prod
   skip_cleanup: true
   on:
     branch: master
