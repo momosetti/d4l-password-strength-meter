@@ -1,5 +1,9 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/114804fdcf5c45f5befb20d0442a01e2)](https://www.codacy.com/gh/momosetti/d4l-password-strength-meter/dashboard?utm_source=github.com&utm_medium=referral&utm_content=momosetti/d4l-password-strength-meter&utm_campaign=Badge_Grade)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2ae33063-1eea-47c8-9ec1-ee1179e658b9/deploy-status)](https://app.netlify.com/sites/d4l-psm/deploys)
+
+[![Build Status](https://app.travis-ci.com/momosetti/d4l-password-strength-meter.svg?branch=master)](https://app.travis-ci.com/momosetti/d4l-password-strength-meter)
+
 > [Live Demo](https://d4l-psm.netlify.app)
 
 ## Project structure
